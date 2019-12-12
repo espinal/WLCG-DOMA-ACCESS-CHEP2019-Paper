@@ -1,0 +1,24 @@
+\section{Data caching: concept, infrastructure and initiatives}
+Simulations of caching layers based on reference WLCG workloads showed a very good ability for latency hiding even when data is read for the first time or once ~\footnote{The simulations have been conducted using using XCache technology (from the xrootd software framework~\cite{xroot})}.
+Within the root framework \cite{root} there is the possibility to cache data (reading ahead) while the file start to be accessed, this has good ability after the first bytes arrive to the worker node and is very effective for latencies up to 10 ms if the job configuration parameters are adjusted to the job data accessing patterns (TTreeCache root configuration). In WLCG we do have more than 160 sites with different roles and a variety of network topologies, hence we envision that sites might have different interests related to the future of their storage services. The new analysis models and the datalake model offers more flexibility for the sites to invest according to their needs. An example is a modest Tier-2 currently providing storage and computing to WLCG experiments, needing to maintain a storage system which they have few interest on. If This site is close enough to a the datalake they can think about accessing data remotely, and if they are on a more distant place they could interface with data by deploying a stateless storage as a caching layer for latency hiding and eventual file reusability. In figure ~\fig{datalake-sketch} is shown a tentative sketch envisioning a datalake composed by sites and federations holding the bulk of the data regions, and the different types of computing-oriented sites, commercial clouds and HPCs accessing the datalake\\
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[height=6.8cm]{datalake-sketch.png}
+  \caption{{\em (center)} Datalake sketch composed by sites and federations holding the bulk of the data regions, and the different types of computing-oriented sites, commercial clouds and HPCs accessing the datalake }
+  \label{fig:datalake-sketch}
+\end{figure}
+The working group has promoted the deployment of several caching models to operate in a region and on a site level. We are investigating three different approaches: a) High performance caching servers to feed a region Southern California (SoCal) and Chicago and b) caching federation to feed data to regional sites (France and Italy examples) and c) site caching mechanism as stateless Tier-2 storage (Munich and Birmingham). The results obtained confirm that caching is a promising mechanism to address the analysis challenge and help increasing an efficient usage of the storage and hence able to optimise the overall cost (meaning be able to store and deliver as much data as possible for the HL-LHC). \\
+The caching layer setup at SoCal demonstrate that three sites (Riverside, Pasadena and San Diego) can benefit of a common caching layer of 1PB (c.f. with the old model where the site had to deal with 10PB of statefull storage installation), this cache can serve 90\% of the jobs/user request at 1/10th of the cost in hardware and alleviating the site to manage a complex storage service.\\
+The initiative in LMU Munich demonstrated that an old disk pool node, with simple hardware configuration (JBOD) and simple XCache deployment could serve up to 3k jobs of ATLAS workflows reading data from the neighbour DESY and from a far site in Beijing. The test concluded that reading from the neighbor and from the far site is no longer a killer but reasonable when comparing to the close access.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[height=6.8cm]{lmu.png}
+  \caption{{\em (center)} XCache running on modest hardware at LMU. Successfully served 3.2k analysis and derivation jobs from ATLAS with and average I/O of 1MB/s and 3MB/s respectively (plot taken from N. Hartman (LMU). Effective latency hiding can be easily achieved for high latency data consumption.}
+  \label{fig:datalake-sketch}
+\end{figure}
+
+
+
+

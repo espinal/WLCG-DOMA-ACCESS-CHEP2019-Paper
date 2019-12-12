@@ -1,0 +1,45 @@
+\documentclass{webofc}
+\usepackage[varg]{txfonts}   % Web of Conferences font
+\usepackage{url}
+\begin{document}
+\title{The Quest to solve the HL-LHC data access puzzle}
+\author{\firstname{Xavier} \lastname{Espinal}\inst{1} \and
+        \firstname{Stephane} \lastname{Jezequel}\inst{2} \and
+        \firstname{Markus} \lastname{Schulz}\inst{1} \and
+        \firstname{Andrea} \lastname{Sciaba}\inst{1} \and
+        \firstname{Ilija} \lastname{Vukotic}\inst{3} \and
+        \firstname{Frank} \lastname{Wuerthwein}\inst{4}
+}
+
+\institute{European Organisation for Nuclear Research (CERN), Geneva, Switzerland \and 
+        Laboratoire d’Annecy de Physique des Particules, Annecy, France \and
+        University of Chicago, Chicago, Illinois, US \and
+        University of California, San Diego, La Jolla, CA, USA
+}
+
+\abstract{HL-LHC will confront the WLCG community with enormous data storage, management and access challenges. These are as much technical as economical. In the WLCG-DOMA Access working group, members of the experiments and site managers have explored different models for data access and storage strategies to reduce cost and complexity, taking into account the boundary conditions given by our community.
+
+Several of these scenarios have been studied quantitatively, such as the datalake model and incremental improvements of the current computing model with respect to resource needs, costs and operational complexity.
+
+To better understand these models in depth, analysis of traces of current data accesses and simulations of the impact of new concepts have been carried out. In parallel, evaluations of the required technologies took place. These were done in testbed and production environments at small and large scale.
+
+We will give an overview of the activities and results of the working group, describe the models and summarise the results of the technology evaluation focusing on the impact of storage consolidation in the form of datalakes, where the use of read-ahead caches (XCache) has emerged as a successful approach to reduce the impact of latency and bandwidth limitation.
+
+We will describe the experience and evaluation of these approaches in different environments and usage scenarios. In addition we will present the results of the analysis and modelling efforts based on data access traces of experiments.}
+
+\maketitle
+
+\input{Introduction}
+
+\input{compact}
+
+
+\input{fileaccess}
+
+\input{caches}
+
+\input{conclusions}
+
+\input{Bibliography}
+
+\end{document}
