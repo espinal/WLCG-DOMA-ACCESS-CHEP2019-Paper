@@ -10,13 +10,13 @@ Within the root framework \cite{root} there is the possibility to cache data (re
 \end{figure}
 The working group has promoted the deployment of several caching models to operate in a region and on a site level. We are investigating three different approaches: a) High performance caching servers to feed a region Southern California (SoCal) and Chicago and b) caching federation to feed data to regional sites (France and Italy examples) and c) site caching mechanism as stateless Tier-2 storage (Munich and Birmingham). The results obtained confirm that caching is a promising mechanism to address the analysis challenge and help increasing an efficient usage of the storage and hence able to optimise the overall cost (meaning be able to store and deliver as much data as possible for the HL-LHC). \\
 The caching layer setup at SoCal demonstrate that three sites (Riverside, Pasadena and San Diego) can benefit of a common caching layer of 1PB (c.f. with the old model where the site had to deal with 10PB of statefull storage installation), this cache can serve 90\% of the jobs/user request at 1/10th of the cost in hardware and alleviating the site to manage a complex storage service.\\
-The initiative in LMU Munich demonstrated that an old disk pool node, with simple hardware configuration (JBOD) and simple XCache deployment could serve up to 3k jobs of ATLAS workflows reading data from the neighbour DESY and from a far site in Beijing. The test concluded that reading from the neighbor and from the far site is no longer a killer but reasonable when comparing to the close access.
+The initiative in LMU Munich demonstrated that an old disk pool node, with simple hardware configuration (JBOD) and simple XCache deployment could serve up to 3k jobs of ATLAS workflows reading data from the neighbour DESY and from a far site in Beijing. The test concluded that reading from the neighbor and from the far site is no longer a killer but reasonable when comparing to the close access ~\ref{lmu-xcache}
 
 \begin{figure}[h]
   \centering
   \includegraphics[height=6.8cm]{lmu.png}
   \caption{{\em (center)} XCache running on modest hardware at LMU. Successfully served 3.2k analysis and derivation jobs from ATLAS with and average I/O of 1MB/s and 3MB/s respectively (plot taken from N. Hartman (LMU). Effective latency hiding can be easily achieved for high latency data consumption.}
-  \label{fig:datalake-sketch}
+  \label{lmu-xcache}
 \end{figure}
 
 
