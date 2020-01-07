@@ -26,9 +26,9 @@
 %
 \LoadClass[fleqn]{article}
 %
-%%%%%%%%%%%%%%%%%%%%
-%%% Class option %%%
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%%% Class option %%%%
+%%%%%%%%%%%%%%%%%%%%%
 %
 \newlength\woc@textwidth
 \newlength\woc@textheight
