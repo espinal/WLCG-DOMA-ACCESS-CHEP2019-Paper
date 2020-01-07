@@ -10,7 +10,7 @@
 %% photjour.mbs  (with options: `ay,nat,seq-no,nm-init,ed-au,nmlm,x10,x0,m10,m0,nmft,nmft-def,fnm-def,nmfted,lab,lab-def,keyxyr,yr-par,note-yr,tit-it,jtit-x,jttl-rm,thtit-x,trtit-x,vol-bf,vnum-x,volp-com,jpg-1,num-xser,jnm-x,pub-date,pre-pub,isbn,issn,edby,blk-com,pp,ed,abr,ednx,ord,jabr,revdata,eprint,url,url-blk,misc-simple,bibinfo,nfss,{}')
 %% merlin.mbs  (with options: `tail,ay,nat,seq-no,nm-init,ed-au,nmlm,x10,x0,m10,m0,nmft,nmft-def,fnm-def,nmfted,lab,lab-def,keyxyr,yr-par,note-yr,tit-it,jtit-x,jttl-rm,thtit-x,trtit-x,vol-bf,vnum-x,volp-com,jpg-1,num-xser,jnm-x,pub-date,pre-pub,isbn,issn,edby,blk-com,pp,ed,abr,ednx,ord,jabr,revdata,eprint,url,url-blk,misc-simple,bibinfo,nfss,{}')
 %% ----------------------------------------
-%% *** Bibliographic Style for The Web of Conferences Journal ***
+%% *** Bibliographic Style for The Web of Conferences Journal ****
 %% 
 %% Copyright 2005 (EDP Sciences)
  % ===============================================================
