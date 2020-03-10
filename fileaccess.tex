@@ -8,10 +8,10 @@ One of the key parameters to assess our effective storage usage is to measure th
   \label{access}
 \end{figure}
 
-This provides an indication whether this type of data could be better accessed through a cache, so it is available when is popular and gets super-seeded with newer files once they are less demanded. In this way the space on disk at the computing sites is optimised for data being actively used and this can be completely delegated to a stateless cache. In parallel less frequently used data might be re-fetched again from the data lake (disk or tape) where the experiments will handle with the required Quality of Service (QoS) to make use of the best cost/usage ratio.\\
-We also observed a fundamental difference between analysis and production data. Analysis has higher re-use while production files have very few re-reads. The net effect is that running combined workflows on a site has the effect that production file push analysis data out of the storage/cache.
+This provides an indication whether this type of data could be better accessed through a cache, so it is available when is popular and gets super-seeded with newer files once they are less demanded. In this way the space on disk at the computing sites is optimised for data being actively used and this can be completely delegated to a stateless cache. In parallel less frequently used data might be re-fetched again from the Data Lake (disk or tape) where the experiments will handle with the required Quality of Service (QoS) to make use of the best cost/usage ratio.\\
+We also observed a fundamental difference between analysis and production data. Analysis has higher re-use while production files have very few re-reads. As a result running combined workflows on a site has the effect to push analysis data out of the cache.
 
 %This made us think that in the case we do not change much of the current infrastructure we would nevertheless benefit by changing the current model and favoring running predictable and time-defined workflows at the sites with less storage and favor less-predictable user analysis on sites with larger storage services.\\
 
 
-These observations are based only on a period of six months but they provide hints towards a cache-oriented storage. Further studies should be done on longer period and also combined with staging and data deletion information. 
+It should be noted that these observations are based only on a period of six months but they provide hints towards a cache-oriented storage. Further studies should be done on longer period and also combined with staging and data deletion information. 
