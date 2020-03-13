@@ -1,5 +1,5 @@
 \section{File usability and data access patterns}
-One of the key parameters to assess our effective storage usage is to measure the access frequency after data placement. There are two extremes regarding data thermodynamics: a) \emph{cold data}, where files are WORN (Write Once Read Never) and b) \emph{hot data}, where files are expected to be accessed continuously and with high concurrency. But after studying data access patterns at several sites we observed that large fraction of our files are neither cold nor hot. The analysis objects files seem to lose popularity with time and the access rate decreases significantly after days/weeks, in (Fig. \ref{access}) the file rates and file popularity on a Tier-1 and a Tier-2 are shown as a function of time as a representative example.
+One of the key parameters to assess our effective storage usage is to measure the access frequency after data placement. The two extremes regarding data thermodynamics are \emph{cold data} where files are WORN (Write Once Read Never) and \emph{hot data} where files are accessed quickly after data placement and with high concurrency. After studying data access patterns at several sites we observed that large fraction of our files are neither totally \emph{cold} nor \emph{hot}. The analysis files lose popularity with time and the access rate decreases significantly after days/weeks, in (Fig. \ref{access}) the file rates and file popularity on a Tier-1 and a Tier-2 are shown as a function of time as a representative example.
 
 \begin{figure}[h]
   \centering
@@ -8,10 +8,9 @@ One of the key parameters to assess our effective storage usage is to measure th
   \label{access}
 \end{figure}
 
-This provides an indication whether this type of data could be better accessed through a cache, so it is available when is popular and gets super-seeded with newer files once they are less demanded. In this way the space on disk at the computing sites is optimised for data being actively used and this can be completely delegated to a stateless cache. In parallel less frequently used data might be re-fetched again from the Data Lake (disk or tape) where the experiments will handle with the required Quality of Service (QoS) to make use of the best cost/usage ratio.\\
+This provides an indication whether this type of data could be better accessed through a cache, so it is available when is popular and gets super-seeded with newer files once they are less demanded. In this way the space on disk at the computing sites is optimised for data being actively used and this can potentially be completely delegated to an \emph{stateless} cache. In parallel less frequently used data might be re-fetched again from the Data Lake (disk or tape) where the experiments will handle the popularity with the required Quality of Service (QoS) to make use of the best cost/usage ratio for the storage.\\
 We also observed a fundamental difference between analysis and production data. Analysis has higher re-use while production files have very few re-reads. As a result running combined workflows on a site has the effect to push analysis data out of the cache.
 
 %This made us think that in the case we do not change much of the current infrastructure we would nevertheless benefit by changing the current model and favoring running predictable and time-defined workflows at the sites with less storage and favor less-predictable user analysis on sites with larger storage services.\\
-
 
 It should be noted that these observations are based only on a period of six months but they provide hints towards a cache-oriented storage. Further studies should be done on longer period and also combined with staging and data deletion information. 
